@@ -41,17 +41,22 @@ app.use(
 })
 
 
-
-https
-  .createServer(
-    {
-      key: fs.readFileSync(".env/server.key"),
-      cert: fs.readFileSync(".env/server.crt"),
-    },
-    app
-  )
-  .listen(port, function () {
+  app.listen(port, function () {
     console.log(
       `Example app listening on port ${port} >`
     );
   });
+
+// https
+//   .createServer(
+//     {
+//       key: fs.readFileSync(".env/server.key"),
+//       cert: fs.readFileSync(".env/server.crt"),
+//     },
+//     app
+//   )
+//   .listen(port, function () {
+//     console.log(
+//       `Example app listening on port ${port} >`
+//     );
+//   });
